@@ -1,0 +1,282 @@
+:root {
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 10px;
+}
+
+section.sidebar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background-color: rgb(69, 144, 206);
+  padding: 10px;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  background: rgb(227, 232, 239);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* HEADER */
+
+header li {
+  display: inline;
+  list-style: none;
+}
+
+header img {
+  width: 20px;
+}
+
+header input[type="text"] {
+  width: calc(100% - 50px);
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  border: none;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+header div:nth-of-type(2) {
+  justify-self: end;
+  gap: 10px;
+}
+
+a.profile-name {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+header div:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  grid-template-rows: 1fr 2fr;
+  justify-items: start;
+}
+
+#large-profile {
+  width: 40px;
+  grid-row: 1 / 3;
+  place-self: center end;
+}
+
+header > div > span:first-of-type {
+  font-size: 0.8rem;
+  align-self: end;
+  font-weight: 700;
+}
+
+header > div > span:nth-of-type(2) {
+  font-size: 1.2rem;
+  align-self: start;
+  font-weight: 700;
+}
+
+header ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+header li > button {
+  width: 6rem;
+  align-items: center;
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(69, 144, 206);
+  border: none;
+  border-radius: 20px;
+}
+
+/* SIDEBAR */
+
+section ul {
+  padding: 0;
+}
+
+section li {
+  list-style: none;
+  padding: 5px;
+}
+
+section li > a,
+section h2 {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0;
+}
+
+section li img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+section h2,
+section ul {
+  margin-bottom: 20px;
+}
+
+/* MAIN */
+
+main li img {
+  width: 15px;
+}
+
+div.projects {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px repeat(3, 5fr);
+  gap: 10px;
+}
+
+main h2 {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: -20px;
+}
+
+.projects > h2 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  align-self: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+  border-left: 5px solid rgb(231, 182, 74);
+}
+
+.card h3,
+.card p {
+  padding: 0;
+  margin: 0;
+}
+
+.card h3 {
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: grey;
+  padding-right: 40px;
+}
+
+.card li {
+  list-style-type: none;
+  display: inline;
+}
+
+.card ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+div.announcements {
+  grid-column: 2;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  gap: 10px;
+}
+
+.announcements > div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.announcements h2 {
+  grid-row: 1;
+  align-self: center;
+  justify-self: start;
+}
+
+.announcements h3,
+.announcements p {
+  margin: 0;
+  padding: 0;
+}
+
+.announcements h3 {
+  font-size: 0.8rem;
+}
+
+.announcements p {
+  font-size: 0.6rem;
+  color: grey;
+}
+
+div.trending {
+  grid-column: 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+}
+
+div.trending-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+}
+
+.trending-grid img {
+  width: 20px;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  justify-self: end;
+  margin-right: 10px;
+}
+
+.trending-grid span:first-of-type {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.trending-grid span:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+div.trending-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+}
